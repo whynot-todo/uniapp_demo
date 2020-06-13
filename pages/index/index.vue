@@ -1,6 +1,6 @@
 <template>
 	<view class="home">
-		<swiper indicator-dots circular autoplay indicator-color='rgba(250,250,250,.5)'indicator-active-color='#b50e03'>
+		<swiper indicator-dots circular autoplay indicator-color='rgba(250,250,250,.5)' indicator-active-color='#b50e03'>
 			<swiper-item v-for="item in swipers" :key="item.id">
 				<image :src="item.img"></image>
 			</swiper-item>
@@ -15,7 +15,7 @@
 		<!-- 推荐商品 -->
 		<view class="hot_goods">
 			<view class="tit">推荐商品</view>
-			<goods-list  @goodsItemClick="goGoodsDetail" :goods="goods"></goods-list>
+			<goods-list @goodsItemClick="goGoodsDetail" :goods="goods"></goods-list>
 		</view>
 	</view>
 </template>
@@ -58,7 +58,7 @@
 				this.swipers = res.data.message
 			},
 			// 获取热门商品列表数据
-			async getHotGoods () {
+			async getHotGoods() {
 				const res = await this.$myRequest({
 					url: '/api/getgoods?pageindex=1'
 				})
@@ -70,9 +70,9 @@
 					url
 				})
 			},
-			goGoodsDetail (id) {
+			goGoodsDetail(id) {
 				uni.navigateTo({
-					url: '/pages/goods-detail/goods-detail?id='+id
+					url: '/pages/goods-detail/goods-detail?id=' + id
 				})
 			}
 		},
@@ -81,7 +81,7 @@
 			/* console.log(this.swipers) 得不到相应的数据 */
 			this.getHotGoods()
 		},
-		components:{
+		components: {
 			GoodsList
 		}
 	}
@@ -97,7 +97,7 @@
 			width: 95%;
 			border-radius: 10rpx;
 			display: block;
-			margin: 5rpx auto ;
+			margin: 5rpx auto;
 			background-color: $shop-color;
 		}
 	}
@@ -116,7 +116,7 @@
 				height: 120rpx;
 				border-radius: 90px;
 				margin: 10px auto;
-				background-image: linear-gradient(to right, #fd0f02,#b50e03);
+				background-image: linear-gradient(to right, #fd0f02, #b50e03);
 			}
 
 			text {
@@ -139,10 +139,11 @@
 		background: #eee;
 
 		.tit {
+			width: 98%;
+			margin: 20px auto 3px;
+			border-radius: 10px;
 			border-top: 2px solid #eee;
 			border-bottom: 2px solid #eee;
-			margin-top: 20px;
-			margin-bottom: 3px;
 			color: $shop-color;
 			height: 50px;
 			line-height: 50px;
@@ -150,7 +151,6 @@
 			letter-spacing: 20px;
 			background: #fff;
 		}
-
-
 	}
+
 </style>

@@ -44,6 +44,11 @@
 			background: #fff;
 			padding: 10px;
 			box-sizing: border-box;
+			border-radius: 5px;
+			box-shadow: 0 0 3px #b50e03;
+			&:nth-child(1),&:nth-child(2){
+				margin-top: 2px;
+			}
 
 			image {
 				width: 80%;
