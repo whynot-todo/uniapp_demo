@@ -93,8 +93,12 @@
 		height: 380rpx;
 
 		image {
-			height: 100%;
-			width: 100%;
+			height: 370rpx;
+			width: 95%;
+			border-radius: 10rpx;
+			display: block;
+			margin: 5rpx auto ;
+			background-color: $shop-color;
 		}
 	}
 
