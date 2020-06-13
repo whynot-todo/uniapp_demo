@@ -1,6 +1,6 @@
 <template>
 	<view class="home">
-		<swiper indicator-dots circular autoplay indicator-color='rgba(249,180,141,.7)'>
+		<swiper indicator-dots circular autoplay indicator-color='rgba(250,250,250,.5)'indicator-active-color='#b50e03'>
 			<swiper-item v-for="item in swipers" :key="item.id">
 				<image :src="item.img"></image>
 			</swiper-item>
