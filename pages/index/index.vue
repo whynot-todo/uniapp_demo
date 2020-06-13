@@ -111,16 +111,16 @@
 			text-align: center;
 
 			view {
-				background: $shop-color;
 				line-height: 120rpx;
 				width: 120rpx;
 				height: 120rpx;
 				border-radius: 90px;
 				margin: 10px auto;
+				background-image: linear-gradient(to right, #fd0f02,#b50e03);
 			}
 
 			text {
-				font-size: 15px;
+				font-size: 32rpx;
 			}
 		}
 
